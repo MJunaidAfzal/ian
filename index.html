@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Thinking by Ian Silverstein | Brand Strategy, Positioning & Mentoring</title>
+<meta name="description" content="Ian Silverstein — consultant providing strategic and commercial advice on brand strategy, brand positioning, mentoring, creative thinking and design management in a global context.">
+<meta name="theme-color" content="#149B9B">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--t:#149B9B;--td:#0f7f7f;--tl:#7fe0de;--n:#081A40;--c:#F2F1EC;--w:#fff;--o:#F08A24;--ink:#3c4558;--line:#e3e1d8;
+--head:"Urbanist",system-ui,sans-serif;--body:"Poppins",system-ui,sans-serif;--pad:clamp(20px,5vw,72px);--ease:cubic-bezier(.22,1,.36,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{font-family:var(--body);background:var(--c);color:var(--n);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.loading{overflow:hidden}
+main{overflow-x:clip}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--t);color:#fff}
+.wrap{padding-left:var(--pad);padding-right:var(--pad)}
+.k{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--t)}
+.k::before{content:"";width:28px;height:2px;background:currentColor;border-radius:2px}
+.h2{font-family:var(--head);font-weight:300;font-size:clamp(36px,4.4vw,62px);line-height:1.06;letter-spacing:-.02em}
+.h2 b{font-weight:700;color:var(--t)}
+.h2 .wd{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}.h2 .wd>span{display:inline-block}
+.lead{font-size:clamp(16px,1.25vw,18px);line-height:1.8;color:var(--ink)}
+.sec{padding:clamp(80px,10vw,140px) 0;position:relative}
+.btn{position:relative;display:inline-flex;align-items:center;gap:12px;padding:18px 30px;border-radius:999px;background:var(--t);color:#fff;font-weight:500;font-size:15px;overflow:hidden;isolation:isolate;transition:color .5s var(--ease);white-space:nowrap}
+.btn::before{content:"";position:absolute;inset:0;background:var(--n);border-radius:inherit;transform:scale(0,1);transform-origin:right;transition:transform .6s var(--ease);z-index:-1}
+.btn:hover::before{transform:scale(1,1);transform-origin:left}
+.btn .ar{transition:transform .5s var(--ease)}.btn:hover .ar{transform:translateX(5px)}
+.btn.line{background:transparent;color:var(--n);border:1.5px solid var(--n)}.btn.line:hover{color:#fff}
+.btn.white{background:#fff;color:var(--t)}.btn.white::before{background:var(--n)}.btn.white:hover{color:#fff}
+.magnetic{will-change:transform}
+
+/* loader */
+#loader{position:fixed;inset:0;z-index:999;display:grid;place-items:center;background:var(--t);overflow:hidden}
+#loader .pnl{position:absolute;inset:0;background:var(--n);transform:translateY(100%)}
+#loader .in{position:relative;z-index:2;text-align:center;color:#fff}
+#loader .sig{width:min(78vw,620px);clip-path:inset(0 100% 0 0)}
+#loader .bar{width:min(60vw,320px);height:2px;background:rgba(255,255,255,.25);margin:38px auto 0;border-radius:2px;overflow:hidden}
+#loader .bar i{display:block;height:100%;background:#fff;transform:scaleX(0);transform-origin:left}
+#loader .pct{margin-top:14px;font-family:var(--head);font-size:14px;letter-spacing:.3em;opacity:.8;font-variant-numeric:tabular-nums}
+#loader .tag{position:absolute;bottom:40px;left:0;right:0;text-align:center;color:rgba(255,255,255,.75);font-size:13px;letter-spacing:.25em;text-transform:uppercase;z-index:2}
+
+#progress{position:fixed;top:0;left:0;width:100%;height:3px;background:var(--o);transform:scaleX(0);transform-origin:left;z-index:200}
+.cursor{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--t);pointer-events:none;z-index:300;transform:translate(-50%,-50%);transition:width .35s var(--ease),height .35s var(--ease),opacity .3s;mix-blend-mode:multiply}
+.cursor.big{width:70px;height:70px;background:rgba(20,155,155,.25)}
+@media (hover:none),(max-width:1024px){.cursor{display:none}}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:150;transition:transform .6s var(--ease),background .5s,box-shadow .5s}
+header .bar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px var(--pad);transition:padding .5s var(--ease)}
+header.solid{background:rgba(242,241,236,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 10px 30px -20px rgba(8,26,64,.35)}
+header.solid .bar{padding-top:14px;padding-bottom:14px}
+header.hide{transform:translateY(-100%)}
+.logo img{height:clamp(30px,3vw,40px);transition:height .5s var(--ease)}
+nav.main ul{display:flex;gap:clamp(18px,2.4vw,36px);list-style:none}
+nav.main a{position:relative;font-size:15px;padding:6px 0}
+nav.main a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;background:var(--t);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+nav.main a:hover::after{transform:scaleX(1);transform-origin:left}
+header .cta{padding:13px 24px;font-size:14px}
+.burger{display:none;width:48px;height:48px;border-radius:50%;background:var(--n);position:relative}
+.burger span{position:absolute;left:15px;right:15px;height:2px;border-radius:2px;background:#fff;transition:transform .5s var(--ease),top .5s var(--ease)}
+.burger span:nth-child(1){top:19px}.burger span:nth-child(2){top:27px}
+.menu-open .burger span:nth-child(1){top:23px;transform:rotate(45deg)}.menu-open .burger span:nth-child(2){top:23px;transform:rotate(-45deg)}
+#mmenu{position:fixed;inset:0;z-index:140;background:var(--t);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:110px var(--pad) 40px;clip-path:circle(0% at calc(100% - 48px) 48px);transition:clip-path .9s var(--ease);visibility:hidden}
+.menu-open #mmenu{clip-path:circle(150% at calc(100% - 48px) 48px);visibility:visible}
+#mmenu ul{list-style:none}#mmenu li{overflow:hidden}
+#mmenu li a{display:block;padding:8px 0;font-family:var(--head);font-weight:600;font-size:clamp(34px,9vw,52px);transform:translateY(110%);transition:transform .8s var(--ease)}
+.menu-open #mmenu li a{transform:none}
+#mmenu .foot{margin-top:34px;font-size:15px;opacity:.9;line-height:1.9}
+#mmenu .mlogo{position:absolute;left:var(--pad);bottom:30px;width:min(70vw,360px);opacity:.25}
+
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(30px,4vw,64px);align-items:center;padding:clamp(120px,14vh,150px) var(--pad) 70px}
+.hero h1{font-family:var(--head);font-weight:300;font-size:clamp(46px,6vw,92px);line-height:1;letter-spacing:-.03em;margin:24px 0 26px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.06em}.hero h1 .ln>span{display:inline-block}
+.hero h1 b{font-weight:700;color:var(--t)}
+.hero .lead{max-width:540px}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.hero .mini{display:flex;gap:clamp(22px,3vw,44px);margin-top:46px;padding-top:28px;border-top:1px solid var(--line)}
+.hero .mini b{display:block;font-family:var(--head);font-size:clamp(30px,3vw,42px);font-weight:700;line-height:1}
+.hero .mini>div>span{font-size:13px;color:var(--ink)}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,clamp(130px,15vw,210px));gap:14px}
+.mosaic .tile{border-radius:24px;overflow:hidden;position:relative}
+.mosaic .tile div{position:absolute;inset:-8%;background-size:cover;background-position:center;will-change:transform}
+.m1{grid-row:1/3;grid-column:1/2}.m2{grid-column:2/4;grid-row:1/2}.m3{grid-row:2/4;grid-column:2/3}.m4{grid-column:3/4;grid-row:2/3}.m5{grid-column:1/2;grid-row:3/4}.m6{grid-column:3/4;grid-row:3/4}
+.badge{position:absolute;z-index:3}
+.mwrap{position:relative}
+.mwrap .bdg{position:absolute;z-index:3;left:-26px;bottom:24%;background:#fff;border-radius:20px;padding:18px 22px;box-shadow:0 30px 60px -25px rgba(8,26,64,.45);display:flex;align-items:center;gap:14px}
+.mwrap .bdg i{width:44px;height:44px;border-radius:50%;background:var(--t);display:grid;place-items:center;color:#fff;font-style:normal;font-family:var(--head);font-weight:700}
+.mwrap .bdg b{display:block;font-family:var(--head);font-size:17px}.mwrap .bdg div>span{font-size:12.5px;color:var(--ink)}
+
+/* marquee */
+.marquee{background:var(--n);color:#fff;overflow:hidden;padding:24px 0;transform:rotate(-1.2deg);margin:10px -10px 0;position:relative;z-index:2}
+.marquee .track{display:flex;width:max-content;animation:mq 40s linear infinite}
+.marquee span{font-family:var(--head);font-size:clamp(22px,2.4vw,34px);font-weight:600;padding:0 28px;white-space:nowrap}
+.marquee span.d{color:var(--o);padding:0}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* about */
+.about .grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(40px,7vw,100px);align-items:start}
+.about .h2{margin-top:20px}
+.about .lead+.lead{margin-top:18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(60px,7vw,100px)}
+.stat{background:#fff;border-radius:26px;padding:clamp(24px,2.6vw,36px);position:relative;overflow:hidden;transition:transform .6s var(--ease)}
+.stat:hover{transform:translateY(-6px)}
+.stat::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:rgba(20,155,155,.08)}
+.stat b{display:block;font-family:var(--head);font-weight:700;font-size:clamp(42px,4.4vw,64px);line-height:1;color:var(--n)}
+.stat b sup{font-size:.45em;color:var(--t);vertical-align:top;margin-left:2px}
+.stat>span{display:block;margin-top:12px;font-size:14.5px;color:var(--ink)}
+.stat.t{background:var(--t);color:#fff}.stat.t b,.stat.t>span{color:#fff}.stat.t::after{background:rgba(255,255,255,.1)}
+.stat.n{background:var(--n)}.stat.n b,.stat.n>span{color:#fff}.stat.n b sup{color:var(--tl)}.stat.n::after{background:rgba(255,255,255,.06)}
+
+/* quote band */
+.qband{position:relative;margin:0 var(--pad);border-radius:clamp(26px,3vw,40px);overflow:hidden;min-height:clamp(420px,60vh,600px);display:flex;align-items:flex-end}
+.qband .im{position:absolute;inset:-14% 0;background:url(assets/cans.webp) center/cover;will-change:transform}
+.qband::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,26,64,.82),rgba(8,26,64,.1) 65%)}
+.qband .t{position:relative;z-index:2;padding:clamp(30px,5vw,70px);color:#fff;max-width:900px}
+.qband q{display:block;font-family:var(--head);font-weight:300;font-size:clamp(32px,4.4vw,64px);line-height:1.08;letter-spacing:-.02em;quotes:none}
+.qband q b{font-weight:700;color:var(--tl)}
+.qband img{width:min(60vw,340px);margin-top:26px;opacity:.95}
+
+/* ventures */
+.ventures .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:clamp(40px,5vw,70px)}
+.ventures .head .h2{margin-top:20px;max-width:700px}
+.vlist{display:grid;gap:clamp(60px,7vw,110px)}
+.ven{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.ven:nth-child(even) .vim{order:2}
+.vim{position:relative;border-radius:30px;overflow:hidden;aspect-ratio:1/1;background:#ddd}
+.vim div{position:absolute;inset:-8%;background-size:cover;background-position:center;will-change:transform}
+.vim .yr{position:absolute;z-index:2;left:22px;top:22px;background:#fff;border-radius:999px;padding:9px 16px;font-size:13px;font-weight:600;color:var(--n)}
+.vtx .num{font-family:var(--head);font-weight:800;font-size:clamp(70px,8vw,120px);line-height:.8;color:transparent;-webkit-text-stroke:1.5px var(--t)}
+.vtx small{display:block;margin-top:20px;font-size:12.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--o)}
+.vtx h3{font-family:var(--head);font-weight:700;font-size:clamp(32px,3.4vw,48px);line-height:1.05;margin:10px 0 18px}
+.vtx p{font-size:16px;line-height:1.8;color:var(--ink)}.vtx p+p{margin-top:12px}
+.vtx .pull{margin:20px 0;padding:18px 22px;border-left:3px solid var(--t);background:#fff;border-radius:0 16px 16px 0;font-family:var(--head);font-size:20px;font-weight:600;color:var(--n)}
+.vtx a.go{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-weight:600;color:var(--t);border-bottom:2px solid var(--t);padding-bottom:4px}
+
+/* journey */
+.journey{background:var(--n);color:#fff;border-radius:clamp(30px,4vw,60px);margin:0 clamp(10px,1.5vw,20px)}
+.journey .k{color:var(--tl)}
+.journey .h2 b{color:var(--tl)}
+.journey .top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:end;margin-bottom:clamp(50px,6vw,80px)}
+.journey .lead{color:rgba(255,255,255,.72)}
+.tline{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.tline::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:rgba(255,255,255,.15)}
+.tline .fill{position:absolute;left:0;right:0;top:9px;height:2px;background:var(--o);transform-origin:left;transform:scaleX(0)}
+.ms{position:relative;padding-top:42px}
+.ms::before{content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--n);border:3px solid var(--o)}
+.ms b{display:block;font-family:var(--head);font-size:clamp(34px,3.2vw,46px);font-weight:700;color:var(--tl);line-height:1}
+.ms h4{font-family:var(--head);font-size:19px;font-weight:600;margin:10px 0 8px}
+.ms p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.66)}
+
+/* help */
+.help .head{text-align:center;max-width:820px;margin:0 auto clamp(50px,6vw,70px)}
+.help .head .h2{margin-top:20px}
+.hcols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.hc{border-radius:30px;padding:clamp(28px,3vw,42px);background:#fff;position:relative;overflow:hidden;transition:transform .6s var(--ease)}
+.hc:hover{transform:translateY(-8px)}
+.hc .ico{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:var(--c);margin-bottom:26px}
+.hc .ico svg{width:26px;height:26px;stroke:var(--t);fill:none;stroke-width:1.8}
+.hc h3{font-family:var(--head);font-size:30px;font-weight:700;margin-bottom:8px}
+.hc>p{font-size:14.5px;color:var(--ink);margin-bottom:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:9px 15px;border-radius:999px;background:var(--c);border:1px solid var(--line);font-size:13.5px;transition:background .3s,color .3s}
+.chips span:hover{background:var(--t);color:#fff;border-color:var(--t)}
+.hc.t{background:var(--t);color:#fff}.hc.t>p{color:rgba(255,255,255,.85)}.hc.t .ico{background:rgba(255,255,255,.16)}.hc.t .ico svg{stroke:#fff}.hc.t .chips span{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.28)}.hc.t .chips span:hover{background:#fff;color:var(--t)}
+.hc.n{background:var(--n);color:#fff}.hc.n>p{color:rgba(255,255,255,.7)}.hc.n .ico{background:rgba(255,255,255,.08)}.hc.n .ico svg{stroke:var(--tl)}.hc.n .chips span{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18)}.hc.n .chips span:hover{background:var(--o);border-color:var(--o)}
+
+/* panorama */
+.pano{position:relative;height:min(90vh,760px);overflow:hidden;display:grid;place-items:center;text-align:center;color:#fff}
+.pano .im{position:absolute;inset:-14% 0;background:url(assets/mt-lake.webp) center 60%/cover;will-change:transform}
+.pano::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,26,64,.25),rgba(8,26,64,.55))}
+.pano .t{position:relative;z-index:2;padding:0 var(--pad)}
+.pano img{width:min(84vw,820px);margin:0 auto;filter:drop-shadow(0 10px 30px rgba(0,0,0,.35))}
+.pano p{font-family:var(--head);font-weight:300;font-size:clamp(20px,2.2vw,30px);margin-top:26px}
+.pano .sigmask{clip-path:inset(0 100% 0 0)}
+
+/* owner */
+.owner .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,90px);align-items:center}
+.owner .h2{margin:20px 0 22px}
+.owner .lead+.lead{margin-top:16px}
+.owner .sig{width:min(80%,420px);margin-top:30px}
+.owner .links{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.pw{position:relative;aspect-ratio:1/1.08}
+.pw .frame{position:absolute;right:0;top:0;width:80%;height:86%;border-radius:32px;overflow:hidden;background:linear-gradient(160deg,var(--t),#0c5f63)}
+.pw .frame img{width:100%;height:100%;object-fit:cover;object-position:56% 35%}
+.pw .frame .ph{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:30px;text-align:center;color:#fff}
+.pw .frame.noimg .ph{display:flex}.pw .frame.noimg img{display:none}
+.pw .frame .ph img{display:block;width:80%;height:auto;object-fit:contain}
+.pw .acc{position:absolute;left:0;bottom:0;width:46%;height:42%;border-radius:26px;background:url(assets/banana-beach.webp) center/cover;border:10px solid var(--c)}
+.pw .chip{position:absolute;right:-14px;bottom:20%;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 30px 60px -25px rgba(8,26,64,.45)}
+.pw .chip b{display:block;font-family:var(--head);font-size:30px;font-weight:700;color:var(--t);line-height:1}.pw .chip>span{font-size:12.5px;color:var(--ink)}
+.pw .ring{position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;border:2px dashed rgba(20,155,155,.45);animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* insights */
+.insights{background:#fff}
+.insights .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:clamp(40px,5vw,60px)}
+.insights .head .h2{margin-top:20px}
+.igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.post{display:block;border-radius:26px;overflow:hidden;background:var(--c);transition:transform .6s var(--ease),box-shadow .6s}
+.post:hover{transform:translateY(-8px);box-shadow:0 40px 70px -40px rgba(8,26,64,.45)}
+.post .im{aspect-ratio:4/5;overflow:hidden}.post .im div{width:100%;height:100%;background-size:cover;background-position:center;transition:transform 1.2s var(--ease)}
+.post:hover .im div{transform:scale(1.06)}
+.post .tx{padding:22px 24px 26px}
+.post small{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--t)}
+.post p{margin-top:10px;font-size:15px;line-height:1.65;color:var(--ink)}
+
+/* testimonials */
+.testi .box{background:var(--t);color:#fff;border-radius:clamp(30px,4vw,50px);padding:clamp(40px,6vw,90px);position:relative;overflow:hidden}
+.testi .box::before{content:"\201C";position:absolute;right:4%;top:-6%;font-family:var(--head);font-weight:800;font-size:clamp(240px,30vw,460px);line-height:1;color:rgba(255,255,255,.08)}
+.testi .k{color:#fff}
+.slides{position:relative;margin-top:30px;min-height:280px}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.slide.on{position:relative;opacity:1;visibility:visible;transform:none}
+.slide blockquote{font-family:var(--head);font-weight:300;font-size:clamp(24px,2.8vw,40px);line-height:1.3;max-width:1050px}
+.slide cite{display:block;margin-top:30px;font-style:normal}
+.slide cite b{display:block;font-size:17px;font-weight:600}
+.slide cite span{font-size:14px;opacity:.85}
+.tctrl{display:flex;align-items:center;gap:14px;margin-top:40px}
+.tctrl button{width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(255,255,255,.6);display:grid;place-items:center;font-size:18px;transition:background .4s,color .4s}
+.tctrl button:hover{background:#fff;color:var(--t)}
+.dots{display:flex;gap:8px;margin-left:14px}.dots i{width:9px;height:9px;border-radius:9px;background:rgba(255,255,255,.4);transition:width .5s var(--ease),background .4s}.dots i.on{width:30px;background:#fff}
+
+/* gallery */
+.gal{overflow:hidden;padding:clamp(30px,4vw,50px) 0}
+.gal .track{display:flex;gap:16px;width:max-content;animation:mq 55s linear infinite}
+.gal .track:hover{animation-play-state:paused}
+.gal .track>div{flex:none;width:clamp(220px,24vw,340px);aspect-ratio:3/2;border-radius:22px;background-size:cover;background-position:center;transition:transform .6s var(--ease)}
+.gal .track>div:hover{transform:scale(1.04)}
+
+/* contact */
+.contact .box{display:grid;grid-template-columns:1.1fr .9fr;border-radius:clamp(30px,4vw,50px);overflow:hidden;background:var(--n);color:#fff}
+.contact .tx{padding:clamp(40px,6vw,90px)}
+.contact .k{color:var(--tl)}
+.contact .h2{margin:20px 0 22px}.contact .h2 b{color:var(--tl)}
+.contact .lead{color:rgba(255,255,255,.72)}
+.cl{display:grid;gap:14px;margin-top:36px}
+.cl a{display:flex;align-items:center;gap:16px;padding:18px 22px;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);transition:background .4s,transform .5s var(--ease)}
+.cl a:hover{background:rgba(255,255,255,.12);transform:translateX(6px)}
+.cl i{width:46px;height:46px;border-radius:14px;background:var(--t);display:grid;place-items:center;flex:none}
+.cl svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.8}
+.cl small{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.cl b{font-weight:500;font-size:16.5px}
+.contact .im{position:relative;min-height:440px;overflow:hidden}
+.contact .im div{position:absolute;inset:-8%;background:url(assets/mt-lake-dusk.webp) 40% center/cover;will-change:transform}
+
+/* footer */
+footer{background:var(--t);color:#fff;margin-top:clamp(80px,10vw,140px);padding:clamp(60px,7vw,90px) 0 30px;border-radius:clamp(30px,5vw,70px) clamp(30px,5vw,70px) 0 0}
+footer .top{display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px}
+footer .top img{width:min(80vw,520px)}
+footer .flinks{display:flex;gap:10px 24px;flex-wrap:wrap;justify-content:center;font-size:15px}
+footer .flinks a{border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:2px}
+.social{display:flex;gap:10px;justify-content:center}
+.social a{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center;transition:background .4s,transform .4s var(--ease)}
+.social a:hover{background:#fff;transform:translateY(-4px)}
+.social svg{width:18px;height:18px;fill:#fff;transition:fill .3s}.social a:hover svg{fill:var(--t)}
+footer .bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:50px;padding-top:24px;border-top:1px solid rgba(255,255,255,.25);font-size:13.5px;opacity:.9}
+
+/* responsive */
+@media (max-width:1100px){
+  nav.main,header .cta{display:none}.burger{display:block}
+  .hero{grid-template-columns:1fr;padding-top:120px}
+  .mwrap{order:-1}
+  .about .grid,.owner .grid,.journey .top,.contact .box{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .ven,.ven:nth-child(even){grid-template-columns:1fr}.ven:nth-child(even) .vim{order:0}
+  .vim{aspect-ratio:4/3}
+  .tline{grid-template-columns:1fr;gap:30px;padding-left:34px}
+  .tline::before,.tline .fill{left:9px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .tline .fill{transform:scaleY(0);transform-origin:top}
+  .ms{padding-top:0}.ms::before{left:-34px;top:2px}
+  .hcols{grid-template-columns:1fr}
+  .igrid{grid-template-columns:1fr 1fr}
+  .ventures .head,.insights .head{flex-direction:column;align-items:flex-start}
+  .pw{max-width:560px}
+  .contact .im{min-height:320px}
+}
+@media (max-width:640px){
+  .mosaic{grid-template-rows:repeat(3,28vw);gap:8px}.mosaic .tile{border-radius:16px}
+  .mwrap{margin-bottom:34px}
+  .mwrap .bdg{left:10px;bottom:-22px;padding:12px 16px}.mwrap .bdg i{width:36px;height:36px}
+  .hero .acts .btn{width:100%;justify-content:center}
+  .hero .mini{gap:18px}
+  .stats{gap:10px}.stat{border-radius:20px}
+  .igrid{grid-template-columns:1fr}
+  .tctrl button{width:48px;height:48px}
+  .pw{aspect-ratio:1/1.25}.pw .frame{width:86%;height:84%}.pw .acc{width:40%;height:34%}.pw .chip{right:0;bottom:8%}.pw .ring{display:none}
+  .marquee{transform:none;margin:0}
+  footer .bot{justify-content:center;text-align:center}
+}
+</style>
+</head>
+<body class="loading">
+
+<div id="loader" aria-hidden="true">
+  <div class="pnl"></div>
+  <div class="in">
+    <img class="sig" src="assets/logo-white.png" alt="">
+    <div class="bar"><i></i></div>
+    <div class="pct" id="pct">000</div>
+  </div>
+  <div class="tag">Good people, to do good business with</div>
+</div>
+<div id="progress"></div>
+<div class="cursor" id="cursor"></div>
+
+<header id="hdr"><div class="bar">
+  <a href="#top" class="logo" aria-label="Creative thinking by Ian Silverstein"><img src="assets/logo-navy.png" alt="Creative thinking by Ian Silverstein"></a>
+  <nav class="main" aria-label="Primary"><ul>
+    <li><a href="#about">About</a></li><li><a href="#ventures">Ventures</a></li><li><a href="#help">Offering</a></li><li><a href="#ian">Meet Ian</a></li><li><a href="#insights">Insights</a></li><li><a href="#testimonials">Testimonials</a></li>
+  </ul></nav>
+  <a href="#contact" class="btn cta magnetic">contact <span class="ar">→</span></a>
+  <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+</div></header>
+<div id="mmenu">
+  <ul>
+    <li><a href="#about">About</a></li><li><a href="#ventures">Ventures</a></li><li><a href="#help">Offering</a></li><li><a href="#ian">Meet Ian</a></li><li><a href="#insights">Insights</a></li><li><a href="#testimonials">Testimonials</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="foot">me@iansilverstein.com<br>+44 (0)333 577 1147</div>
+  <img class="mlogo" src="assets/logo-white.png" alt="">
+</div>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="content">
+    <span class="k h-in">Brand Strategy · Positioning · Mentoring</span>
+    <h1 id="h1"><span class="ln"><span>Brands with a</span></span><span class="ln"><span><b>point of</b></span></span><span class="ln"><span><b>difference.</b></span></span></h1>
+    <p class="lead h-in">I am a consultant providing strategic and commercial advice to businesses looking for brand strategy, brand positioning, mentoring, creative thinking and design management in a global context.</p>
+    <div class="acts h-in"><a href="#contact" class="btn magnetic">Let's talk brand <span class="ar">→</span></a><a href="#ventures" class="btn line magnetic">See my ventures</a></div>
+    <div class="mini h-in"><div><b><span class="count" data-to="25">25</span>+</b><span>Years in the creative industry</span></div><div><b><span class="count" data-to="20">20</span></b><span>Years growing Creative Action</span></div><div><b><span class="count" data-to="6">6</span></b><span>Sectors served</span></div></div>
+  </div>
+  <div class="mwrap">
+    <div class="mosaic">
+      <div class="tile m1"><div style="background-image:url(assets/umbrellas.webp);background-position:30% center"></div></div>
+      <div class="tile m2"><div style="background-image:url(assets/glass.webp)"></div></div>
+      <div class="tile m3"><div style="background-image:url(assets/orange-roof.webp)"></div></div>
+      <div class="tile m4"><div style="background-image:url(assets/oranges.webp)"></div></div>
+      <div class="tile m5"><div style="background-image:url(assets/cans.webp)"></div></div>
+      <div class="tile m6"><div style="background-image:url(assets/windows.webp)"></div></div>
+    </div>
+    <div class="bdg hf"><i>IS</i><div><b>Creative Thinker</b><span>International outlook</span></div></div>
+  </div>
+</section>
+
+<div class="marquee"><div class="track">
+  <span>Brand Strategy</span><span class="d">●</span><span>Brand Positioning</span><span class="d">●</span><span>Mentoring</span><span class="d">●</span><span>Creative Thinking</span><span class="d">●</span><span>Design Management</span><span class="d">●</span><span>Rebranding</span><span class="d">●</span><span>Brand Identity</span><span class="d">●</span>
+  <span>Brand Strategy</span><span class="d">●</span><span>Brand Positioning</span><span class="d">●</span><span>Mentoring</span><span class="d">●</span><span>Creative Thinking</span><span class="d">●</span><span>Design Management</span><span class="d">●</span><span>Rebranding</span><span class="d">●</span><span>Brand Identity</span><span class="d">●</span>
+</div></div>
+
+<!-- ABOUT -->
+<section class="about sec" id="about">
+  <div class="wrap">
+    <div class="grid">
+      <div><span class="k rv">About</span><h2 class="h2">At the core of every business I have started is <b>the Brand.</b></h2></div>
+      <div>
+        <p class="lead rv">With over 25 years’ experience in the creative industry, having founded an international design consultancy, as well as starting a number of other lifestyle and creative businesses, I am now looking to use my experience to support others to build their businesses, brands and ideas.</p>
+        <p class="lead rv">At the core of every business I have started is the Brand and that’s always been my focus, passion and expertise — creating value, a point of difference and something to be proud of.</p>
+        <p class="lead rv">Utilising my experience, knowledge, contacts and enthusiasm, I am seeking new opportunities that enable me to work with dynamic people and do great things.</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><b><span class="count" data-to="25">25</span><sup>+</sup></b><span>Years’ experience in the creative industry</span></div>
+      <div class="stat t rv"><b><span class="count" data-to="18">18</span></b><span>Age Ian founded Creative Action</span></div>
+      <div class="stat n rv"><b><span class="count" data-to="3">3</span></b><span>International offices — Qatar, Oman &amp; Bahrain</span></div>
+      <div class="stat rv"><b>2003</b><span>Launched Vodafone in Bahrain &amp; Kuwait</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<section class="qband" id="qband"><div class="im" id="qim"></div><div class="t"><q class="rv">I am looking for ‘good people, to do <b>good business</b> with’.</q><img class="rv" src="assets/logo-white.png" alt=""></div></section>
+
+<!-- VENTURES -->
+<section class="ventures sec" id="ventures">
+  <div class="wrap">
+    <div class="head"><div><span class="k rv">Ventures</span><h2 class="h2">Businesses I have <b>built &amp; am building.</b></h2></div><p class="lead rv" style="max-width:420px">From an award-winning international design agency to the next idea — always with the Brand at the core.</p></div>
+    <div class="vlist">
+      <article class="ven">
+        <div class="vim"><div style="background-image:url(assets/v-creativeaction.webp)" data-par></div><span class="yr">1996 – 2017</span></div>
+        <div class="vtx rv"><div class="num">01</div><small>International Design Agency</small><h3>Creative Action</h3>
+          <p>I started Creative Action when I was 18 and ran and grew the business for 20 years. We first built a great team of people and then worked on promoting our brand to UK clients.</p>
+          <p>In 2003 we launched Vodafone in Bahrain and then also in Kuwait, launching our first international office in Qatar in 2005. The business grew, winning global branding projects in Oman and Bahrain, where we also opened 2 further offices.</p>
+          <div class="pull">An award-winning design consultancy until I sold the business in 2017.</div>
+          <a class="go" href="http://www.creativeaction.co.uk/" target="_blank" rel="noopener">Visit Creative Action →</a></div>
+      </article>
+      <article class="ven">
+        <div class="vim"><div style="background-image:url(assets/v-locations.webp)" data-par></div><span class="yr">2017</span></div>
+        <div class="vtx rv"><div class="num">02</div><small>Location Broker</small><h3>Silverstein Locations</h3>
+          <p>I started Silverstein Locations after building my dream house in St Albans and then listing it with location agencies for TV, Film and Media Productions, which I really enjoyed.</p>
+          <div class="pull">SL is the locations broker for the creatively enlightened. An agent facilitates, a Broker collaborates.</div>
+          <p>Representing and scouting the perfect location for your production — directly connecting brands, location scouts and managers, production companies and creatives with exceptional location owners.</p>
+          <a class="go" href="https://www.silversteinlocations.com/" target="_blank" rel="noopener">Visit Silverstein Locations →</a></div>
+      </article>
+      <article class="ven">
+        <div class="vim"><div style="background-image:url(assets/v-disrupt.webp)" data-par></div><span class="yr">Launching 2025</span></div>
+        <div class="vtx rv"><div class="num">03</div><small>A New Way of Doing Something</small><h3>Disrupt Project</h3>
+          <p>For many years I have been thinking “I’m sure there is a better way of doing this?” — guess what, there is…</p>
+          <p>I am working on a very exciting project that will bring a wonderful opportunity to the masses to generate additional income, create the largest choice for the industry and use tech, including AI, to make change for the better.</p>
+          <div class="pull">Watch this space…</div></div>
+      </article>
+      <article class="ven">
+        <div class="vim"><div style="background-image:url(assets/v-goodnews.webp)" data-par></div><span class="yr">Passion Project 2026</span></div>
+        <div class="vtx rv"><div class="num">04</div><small>Passion Project</small><h3>Good News Channel</h3>
+          <p>Imagine a channel that reports nothing but the Good News being made by everyday people, doing everyday things and acts of kindness, being generous with their time and restoring our faith in humanity.</p>
+          <p>A 24/7 news feed, where you want it, when you want it, feeding you with wholesome content that lifts and inspires you — with an opportunity for brands to be associated with doing good things for good people.</p>
+          <div class="pull">How about getting involved in that?</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="journey sec" id="journey">
+  <div class="wrap">
+    <div class="top">
+      <div><span class="k rv">The Journey</span><h2 class="h2">Building brands in a <b>global context.</b></h2></div>
+      <p class="lead rv">Extensive experience in business development, growth and international expansion — with a specific knowledge of the Middle East.</p>
+    </div>
+    <div class="tline" id="tline"><span class="fill"></span>
+      <div class="ms rv"><b>1996</b><h4>Creative Action founded</h4><p>Started at 18 — first building a great team, then promoting the brand to UK clients.</p></div>
+      <div class="ms rv"><b>2003</b><h4>Vodafone launches</h4><p>Launched Vodafone in Bahrain and then also in Kuwait.</p></div>
+      <div class="ms rv"><b>2005</b><h4>Qatar office</h4><p>Creative Action’s first international office opens in Qatar.</p></div>
+      <div class="ms rv"><b>2017</b><h4>A new chapter</h4><p>Sold the award-winning consultancy and started Silverstein Locations.</p></div>
+      <div class="ms rv"><b>2025+</b><h4>What’s next</h4><p>Disrupt Project launching, and the Good News Channel in 2026.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HELP -->
+<section class="help sec" id="help">
+  <div class="wrap">
+    <div class="head"><span class="k rv">How I can help</span><h2 class="h2">Creating value and <b>a point of difference.</b></h2></div>
+    <div class="hcols">
+      <div class="hc t rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.9H22l-6 4.6 2.3 7L12 16l-6.3 4.5 2.3-7-6-4.6h7.6z"/></svg></div><h3>My offering</h3><p>Brand and design services built on 25 years in the creative industry.</p>
+        <div class="chips"><span>Commercial Interiors</span><span>Rebranding</span><span>Digital</span><span>Social Media</span><span>Residential Interiors</span><span>Brand Identity</span><span>Design Management</span><span>Creative Thinking</span><span>Mentoring</span></div></div>
+      <div class="hc rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg></div><h3>My skills</h3><p>Strategic and commercial expertise for brands entering new markets.</p>
+        <div class="chips"><span>International Market Entry — Middle East</span><span>Competitor analysis &amp; evaluation</span><span>Trends in global consumer culture</span><span>Customer journey &amp; experience mapping</span><span>Design management</span><span>Brand propositioning &amp; naming</span><span>Digital development</span><span>Creative workshops</span><span>Innovative thinking</span><span>Creative Spaces — Retail, Commercial &amp; Residential</span></div></div>
+      <div class="hc n rv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div><h3>Sectors</h3><p>Industries I have worked in across the UK and the Middle East.</p>
+        <div class="chips"><span>Telecommunications</span><span>Retail</span><span>Sports</span><span>Leisure &amp; Entertainment</span><span>FMCG</span><span>Hospitality</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PANORAMA -->
+<section class="pano" id="pano"><div class="im" id="pim"></div><div class="t"><img class="sigmask" id="psig" src="assets/logo-white.png" alt="Creative thinking by Ian Silverstein"><p class="rv">Brand strategy · Brand positioning · Mentoring · Design management</p></div></section>
+
+<!-- OWNER -->
+<section class="owner sec" id="ian">
+  <div class="wrap grid">
+    <div>
+      <span class="k rv">Meet Ian</span>
+      <h2 class="h2">Founder at 18. <b>25 years</b> building brands, businesses &amp; ideas.</h2>
+      <p class="lead rv">Ian Silverstein started Creative Action when he was 18 and grew it for 20 years into an award-winning international design consultancy — launching Vodafone in Bahrain and Kuwait and opening offices in Qatar, Oman and Bahrain — before selling the business in 2017.</p>
+      <p class="lead rv">Through his experience in the Middle East he founded The Qatar Consultancy, specifically to support UK businesses looking to do business in Qatar. Today he uses his experience, knowledge, contacts and enthusiasm to support others to build their businesses, brands and ideas.</p>
+      <img class="sig rv" src="assets/logo-navy.png" alt="Ian Silverstein signature">
+      <div class="links rv"><a class="btn magnetic" href="#contact">Work with Ian <span class="ar">→</span></a><a class="btn line magnetic" href="https://www.linkedin.com/in/ian-silverstein/" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="pw rv">
+      <div class="ring"></div>
+      <div class="frame" id="pframe"><img src="assets/ian.jpg" alt="Ian Silverstein" onerror="this.parentNode.classList.add('noimg')"><div class="ph"><img src="assets/logo-white.png" alt=""></div></div>
+      <div class="acc"></div>
+      <div class="chip"><b>25+</b><span>Years of brand expertise</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section class="insights sec" id="insights">
+  <div class="wrap">
+    <div class="head"><div><span class="k rv">Insights</span><h2 class="h2">Thoughts on brand, <b>creativity &amp; commerce.</b></h2></div><a class="btn line magnetic rv" href="https://www.instagram.com/iansilverstein/" target="_blank" rel="noopener">Follow on Instagram <span class="ar">→</span></a></div>
+    <div class="igrid">
+      <a class="post" href="https://www.instagram.com/p/DQgn6pnk92b/" target="_blank" rel="noopener"><div class="im"><div style="background-image:url(assets/post-blend.webp)"></div></div><div class="tx"><small>Creativity × Commerce</small><p>Creativity alone won't pay the bills — but when you blend it with commerce, that's where the magic happens.</p></div></a>
+      <a class="post" href="https://www.instagram.com/p/DQelmckAPzX/" target="_blank" rel="noopener"><div class="im"><div style="background-image:url(assets/post-void.webp)"></div></div><div class="tx"><small>Brand Purpose</small><p>Matching your brand purpose with market demands isn't just smart — it's essential.</p></div></a>
+      <a class="post" href="https://www.instagram.com/p/DQbeV3VDlbt/" target="_blank" rel="noopener"><div class="im"><div style="background-image:url(assets/post-bespoke.webp)"></div></div><div class="tx"><small>Professional Ethics</small><p>Professional ethics in creative consultancy isn't just a nice-to-have — it's the foundation that builds trust and drives real results.</p></div></a>
+      <a class="post" href="https://www.instagram.com/p/DQZcMoqDZIR/" target="_blank" rel="noopener"><div class="im"><div style="background-image:url(assets/post-fear.webp)"></div></div><div class="tx"><small>Brand Evolution</small><p>Change can feel like a leap into the unknown — but in brand evolution, fear often holds us back from the growth we crave.</p></div></a>
+      <a class="post" href="https://www.instagram.com/p/DQW3Jg9Dy_k/" target="_blank" rel="noopener"><div class="im"><div style="background-image:url(assets/post-offshelf.webp)"></div></div><div class="tx"><small>Bespoke Branding</small><p>In a world flooded with cookie-cutter ideas, your brand needs to stand out authentically.</p></div></a>
+      <a class="post" href="https://www.instagram.com/p/DQWUzokDAtj/" target="_blank" rel="noopener"><div class="im"><div style="background-image:url(assets/post-strategy.webp)"></div></div><div class="tx"><small>Brand Strategy</small><p>25 years in the creative industry has taught me one thing: your brand strategy isn't just about looking good.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi sec" id="testimonials">
+  <div class="wrap"><div class="box">
+    <span class="k rv">Testimonials</span>
+    <div class="slides" id="slides">
+      <div class="slide on"><blockquote>Ian is a very experienced brand consultant with an impressive credentials portfolio. He is great to work with — creative, collaborative, responsive and effective with an international outlook. There is nothing this man doesn't know about running a creative business, especially in the Middle East.</blockquote><cite><b>Christine Losecaat MBE</b><span>Little Dipper Ltd</span></cite></div>
+      <div class="slide"><blockquote>I view Ian as an intuitive and smart guy with a clear creative gene, and, rest assured, you will always get 100% energy and enthusiasm as he is very passionate about everything he does.</blockquote><cite><b>Simon P Casson FIH</b><span>Chief Executive Officer // Corinthia Hotels</span></cite></div>
+      <div class="slide"><blockquote>Ian is great at making ‘how good could it be?’ a reality, particularly in interior design.</blockquote><cite><b>Tim Watson</b><span>Brand Consultant</span></cite></div>
+      <div class="slide"><blockquote>Ian and his team at Creative Action did an amazing job with CONNECTED by Qatar Post brand creation and its ATL launch campaign. A team full of talent, dedication and passion for brand and marketing.</blockquote><cite><b>Maud Daniel</b><span>Head of Marketing &amp; Communications // Qatar Post</span></cite></div>
+      <div class="slide"><blockquote>Ian is a true Creative Thinker. I have worked with him on several projects and he always comes at things from a different and new angle.</blockquote><cite><b>Brent Jackson</b><span>Consultant</span></cite></div>
+    </div>
+    <div class="tctrl"><button id="prev" aria-label="Previous">←</button><button id="next" aria-label="Next">→</button><div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div></div>
+  </div></div>
+</section>
+
+<!-- GALLERY -->
+<div class="gal" aria-hidden="true"><div class="track">
+  <div style="background-image:url(assets/city-teal.webp)"></div><div style="background-image:url(assets/banana-beach.webp)"></div><div style="background-image:url(assets/water.webp)"></div><div style="background-image:url(assets/red-wall.webp)"></div><div style="background-image:url(assets/sunset.webp)"></div><div style="background-image:url(assets/drops.webp)"></div><div style="background-image:url(assets/window-glow.webp)"></div><div style="background-image:url(assets/mt-gold.webp)"></div>
+  <div style="background-image:url(assets/city-teal.webp)"></div><div style="background-image:url(assets/banana-beach.webp)"></div><div style="background-image:url(assets/water.webp)"></div><div style="background-image:url(assets/red-wall.webp)"></div><div style="background-image:url(assets/sunset.webp)"></div><div style="background-image:url(assets/drops.webp)"></div><div style="background-image:url(assets/window-glow.webp)"></div><div style="background-image:url(assets/mt-gold.webp)"></div>
+</div></div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap"><div class="box">
+    <div class="tx">
+      <span class="k rv">Contact</span>
+      <h2 class="h2">Let's do <b>good business</b> together.</h2>
+      <p class="lead rv">Looking for brand strategy, brand positioning, mentoring, creative thinking or design management? I am seeking new opportunities to work with dynamic people and do great things.</p>
+      <div class="cl">
+        <a class="rv" href="mailto:me@iansilverstein.com"><i><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i><div><small>Email</small><b>me@iansilverstein.com</b></div></a>
+        <a class="rv" href="tel:+443335771147"><i><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg></i><div><small>Telephone</small><b>+44 (0)333 577 1147</b></div></a>
+        <a class="rv" href="https://www.linkedin.com/in/ian-silverstein/" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></svg></i><div><small>LinkedIn</small><b>Connect with Ian</b></div></a>
+      </div>
+    </div>
+    <div class="im"><div id="cim"></div></div>
+  </div></div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <img src="assets/logo-white.png" alt="Creative thinking by Ian Silverstein">
+      <div class="flinks"><a href="http://www.creativeaction.co.uk/" target="_blank" rel="noopener">Creative Action</a><a href="https://www.silversteinlocations.com/" target="_blank" rel="noopener">Silverstein Locations</a><a href="mailto:me@iansilverstein.com">me@iansilverstein.com</a><a href="tel:+443335771147">+44 (0)333 577 1147</a></div>
+      <div class="social">
+        <a href="https://www.instagram.com/iansilverstein/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2z"/></svg></a>
+        <a href="https://www.facebook.com/iansimonsilverstein/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6c0-.9.6-1.1 1-1.1h2.6V1h-3.6C10 1 9.3 3.9 9.3 5.8V8H7v4h2.3v11H14V12h3.2l.4-4z"/></svg></a>
+        <a href="https://www.linkedin.com/in/ian-silverstein/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.84-2.05 3.79-2.05C20.6 8.65 21 11.2 21 14.5V21h-4v-5.8c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9z"/></svg></a>
+        <a href="https://twitter.com/iansilverstein" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.7 3H21l-7.2 8.2L22 21h-6.6l-5.2-6.8L4.3 21H1l7.7-8.8L1 3h6.8l4.7 6.2zm-1.2 16h1.8L7.6 4.9H5.7z"/></svg></a>
+      </div>
+    </div>
+    <div class="bot"><span>© 2026 Ian Silverstein. All rights reserved.</span><span>Creative Action • Silverstein Locations</span><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var body=document.body, loader=document.getElementById('loader');
+  function done(){ body.classList.remove('loading'); if(loader) loader.remove(); }
+  if(typeof gsap==='undefined'){ done(); return; }
+  gsap.registerPlugin(ScrollTrigger);
+  var mobile=window.matchMedia('(max-width:1100px)').matches;
+
+  var lenis=null;
+  if(typeof Lenis!=='undefined'){
+    lenis=new Lenis({duration:1.15,smoothWheel:true}); window.__lenis=lenis; lenis.stop();
+    lenis.on('scroll',ScrollTrigger.update); gsap.ticker.add(function(t){lenis.raf(t*1000)}); gsap.ticker.lagSmoothing(0);
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href'); var el=id==='#top'?document.body:document.querySelector(id); if(!el) return;
+      e.preventDefault(); body.classList.remove('menu-open');
+      if(lenis){ lenis.start(); lenis.scrollTo(el,{offset:id==='#top'?0:-80,duration:1.5}); } else el.scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  /* split h2 into words */
+  document.querySelectorAll('.h2').forEach(function(h){
+    var w=document.createTreeWalker(h,NodeFilter.SHOW_TEXT,null),ns=[]; while(w.nextNode()) ns.push(w.currentNode);
+    ns.forEach(function(n){ var f=document.createDocumentFragment();
+      n.textContent.split(/(\s+)/).forEach(function(x){ if(!x) return; if(/^\s+$/.test(x)){f.appendChild(document.createTextNode(x));return;}
+        var o=document.createElement('span');o.className='wd';var i=document.createElement('span');i.textContent=x;o.appendChild(i);f.appendChild(o); });
+      n.parentNode.replaceChild(f,n); });
+  });
+
+  /* initial states */
+  gsap.set('#h1 .ln>span',{yPercent:110});
+  gsap.set('.h-in',{autoAlpha:0,y:30});
+  gsap.set('.mosaic .tile',{clipPath:'inset(100% 0% 0% 0% round 24px)'});
+  gsap.set('.mosaic .tile div',{scale:1.35});
+  gsap.set('.hf',{autoAlpha:0,scale:.8});
+  gsap.set('header',{autoAlpha:0,y:-30});
+
+  /* loader timeline */
+  var cnt={v:0},pct=document.getElementById('pct');
+  var tl=gsap.timeline();
+  tl.to('#loader .sig',{clipPath:'inset(0 0% 0 0)',duration:1.8,ease:'power2.inOut'})
+    .to(cnt,{v:100,duration:2,ease:'power1.inOut',onUpdate:function(){pct.textContent=String(Math.round(cnt.v)).padStart(3,'0')}},0)
+    .to('#loader .bar i',{scaleX:1,duration:2,ease:'power1.inOut'},0)
+    .to('#loader .in,#loader .tag',{autoAlpha:0,y:-30,duration:.6,ease:'power2.in'},2.2)
+    .to('#loader .pnl',{yPercent:-100,duration:.9,ease:'expo.inOut'},2.45)
+    .to('#loader',{clipPath:'inset(0 0 100% 0)',duration:.9,ease:'expo.inOut',onComplete:intro},2.85)
+    .to('header',{autoAlpha:1,y:0,duration:1,ease:'power3.out'},3.2)
+    .to('#h1 .ln>span',{yPercent:0,duration:1.2,stagger:.12,ease:'power4.out'},3.1)
+    .to('.h-in',{autoAlpha:1,y:0,duration:1,stagger:.1,ease:'power3.out'},3.4)
+    .to('.mosaic .tile',{clipPath:'inset(0% 0% 0% 0% round 24px)',duration:1.3,stagger:{each:.1,from:'random'},ease:'expo.inOut'},3.0)
+    .to('.mosaic .tile div',{scale:1,duration:2,stagger:{each:.1,from:'random'},ease:'expo.out'},3.1)
+    .to('.hf',{autoAlpha:1,scale:1,duration:.9,ease:'back.out(1.8)'},4.1);
+  function intro(){ done(); if(lenis) lenis.start(); ScrollTrigger.refresh(); }
+
+  /* hero mosaic parallax on scroll + mouse */
+  gsap.utils.toArray('.mosaic .tile div').forEach(function(d,i){
+    gsap.to(d,{yPercent:(i%2?8:-8),ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+  });
+  if(!mobile){
+    document.getElementById('hero').addEventListener('mousemove',function(e){
+      var x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;
+      gsap.to('.mosaic',{x:x*-16,y:y*-12,duration:1.2,ease:'power3.out'});
+      gsap.to('.mwrap .bdg',{x:x*24,y:y*18,duration:1.2,ease:'power3.out'});
+    });
+  }
+  gsap.to('.mwrap .bdg',{y:'-=12',duration:2.6,ease:'sine.inOut',yoyo:true,repeat:-1,delay:5});
+
+  /* reveals */
+  gsap.utils.toArray('.rv').forEach(function(el){
+    gsap.fromTo(el,{autoAlpha:0,y:50},{autoAlpha:1,y:0,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('.h2').forEach(function(h){
+    gsap.fromTo(h.querySelectorAll('.wd>span'),{yPercent:115},{yPercent:0,duration:1.1,stagger:.05,ease:'power4.out',scrollTrigger:{trigger:h,start:'top 90%',once:true}});
+  });
+  /* chips stagger */
+  gsap.utils.toArray('.chips').forEach(function(c){
+    gsap.fromTo(c.children,{autoAlpha:0,y:16,scale:.9},{autoAlpha:1,y:0,scale:1,duration:.6,stagger:.04,ease:'back.out(1.6)',scrollTrigger:{trigger:c,start:'top 90%',once:true}});
+  });
+  /* ventures: image clip + parallax */
+  gsap.utils.toArray('.vim').forEach(function(v,i){
+    gsap.fromTo(v,{clipPath:(i%2?'inset(0 0 0 100% round 30px)':'inset(0 100% 0 0 round 30px)')},{clipPath:'inset(0 0% 0 0% round 30px)',duration:1.5,ease:'expo.inOut',scrollTrigger:{trigger:v,start:'top 82%',once:true}});
+    gsap.fromTo(v.querySelector('[data-par]'),{yPercent:-7},{yPercent:7,ease:'none',scrollTrigger:{trigger:v,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+  gsap.utils.toArray('.vtx .num').forEach(function(n){
+    gsap.fromTo(n,{x:-60,autoAlpha:0},{x:0,autoAlpha:1,duration:1.2,ease:'power4.out',scrollTrigger:{trigger:n,start:'top 88%',once:true}});
+  });
+  /* big image parallax */
+  [['#qim','#qband'],['#pim','#pano'],['#cim','#contact']].forEach(function(p){
+    gsap.fromTo(p[0],{yPercent:-8,scale:1.08},{yPercent:8,scale:1,ease:'none',scrollTrigger:{trigger:p[1],start:'top bottom',end:'bottom top',scrub:true}});
+  });
+  /* panorama signature write-on */
+  gsap.to('#psig',{clipPath:'inset(0 0% 0 0)',ease:'none',scrollTrigger:{trigger:'#pano',start:'top 70%',end:'center 50%',scrub:1}});
+  /* journey line */
+  if(!mobile) gsap.to('#tline .fill',{scaleX:1,ease:'none',scrollTrigger:{trigger:'#tline',start:'top 80%',end:'bottom 55%',scrub:true}});
+  else gsap.to('#tline .fill',{scaleY:1,ease:'none',scrollTrigger:{trigger:'#tline',start:'top 80%',end:'bottom 60%',scrub:true}});
+  /* journey section scale-in */
+  gsap.fromTo('#journey',{scale:.94,borderRadius:'80px'},{scale:1,ease:'none',scrollTrigger:{trigger:'#journey',start:'top bottom',end:'top 30%',scrub:true}});
+  /* stats + posts stagger */
+  [['.stats','.stat'],['.igrid','.post'],['.hcols','.hc']].forEach(function(s){
+    var items=document.querySelectorAll(s[1]); items.forEach(function(i){i.classList.remove('rv')});
+    gsap.fromTo(items,{autoAlpha:0,y:70},{autoAlpha:1,y:0,duration:1,stagger:.12,ease:'power3.out',scrollTrigger:{trigger:s[0],start:'top 86%',once:true}});
+  });
+  /* owner frame */
+  gsap.fromTo('#pframe',{clipPath:'inset(0 0 100% 0 round 32px)'},{clipPath:'inset(0 0 0% 0 round 32px)',duration:1.6,ease:'expo.inOut',scrollTrigger:{trigger:'#pframe',start:'top 80%',once:true}});
+  /* counters */
+  gsap.utils.toArray('.count').forEach(function(el){
+    var to=+el.dataset.to,o={v:0}; el.textContent='0';
+    ScrollTrigger.create({trigger:el,start:'top 92%',once:true,onEnter:function(){
+      gsap.to(o,{v:to,duration:2,delay:el.closest('.hero')?3.6:0,ease:'power3.out',onUpdate:function(){el.textContent=Math.round(o.v)}});
+    }});
+  });
+
+  /* progress + header */
+  var prog=document.getElementById('progress'),hdr=document.getElementById('hdr'),last=0;
+  ScrollTrigger.create({start:0,end:'max',onUpdate:function(s){
+    prog.style.transform='scaleX('+s.progress+')'; var y=s.scroll();
+    hdr.classList.toggle('solid',y>40);
+    if(!body.classList.contains('menu-open')) hdr.classList.toggle('hide',y>last&&y>500); last=y;
+  }});
+
+  /* menu */
+  document.getElementById('burger').addEventListener('click',function(){
+    body.classList.toggle('menu-open'); var open=body.classList.contains('menu-open');
+    if(lenis){ open?lenis.stop():lenis.start(); }
+    document.querySelectorAll('#mmenu li a').forEach(function(a,i){a.style.transitionDelay=(open?.25+i*.05:0)+'s'});
+  });
+
+  /* testimonials */
+  var sl=document.querySelectorAll('.slide'),dots=document.querySelectorAll('#dots i'),cur=0,timer;
+  function show(n){ sl[cur].classList.remove('on'); dots[cur].classList.remove('on'); cur=(n+sl.length)%sl.length; sl[cur].classList.add('on'); dots[cur].classList.add('on'); }
+  function auto(){ clearInterval(timer); timer=setInterval(function(){show(cur+1)},7000); }
+  document.getElementById('next').onclick=function(){show(cur+1);auto()};
+  document.getElementById('prev').onclick=function(){show(cur-1);auto()};
+  dots.forEach(function(d,i){d.onclick=function(){show(i);auto()}}); auto();
+
+  /* magnetic + cursor */
+  if(!mobile){
+    document.querySelectorAll('.magnetic').forEach(function(b){
+      b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.3,y:(e.clientY-r.top-r.height/2)*.4,duration:.6,ease:'power3.out'})});
+      b.addEventListener('mouseleave',function(){gsap.to(b,{x:0,y:0,duration:.9,ease:'elastic.out(1,.4)'})});
+    });
+    var c=document.getElementById('cursor'),cx=gsap.quickTo(c,'x',{duration:.3,ease:'power3'}),cy=gsap.quickTo(c,'y',{duration:.3,ease:'power3'});
+    window.addEventListener('mousemove',function(e){cx(e.clientX);cy(e.clientY)});
+    document.querySelectorAll('a,button,.post,.hc,.stat,.vim').forEach(function(el){
+      el.addEventListener('mouseenter',function(){c.classList.add('big')}); el.addEventListener('mouseleave',function(){c.classList.remove('big')});
+    });
+  }
+  window.addEventListener('load',function(){ScrollTrigger.refresh()});
+})();
+</script>
+</body>
+</html>
